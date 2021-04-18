@@ -8,5 +8,4 @@ class appp1(models.Model):
     Songs = models.TextField(max_length=1000)
 
     def __str__(self):
-        return self.Name
-
+        return self.Name + "-----" + self.StageName + "----" + self.Songs
