@@ -7,6 +7,7 @@
 <head>
     <title>BTS</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <img src="{% static 'images/bts.jfif' %}">
 
 <body>
 
@@ -15,10 +16,16 @@
     
     <p style="color:red;">Bullet proof.</p>
 
-    {{ appp1 }}
+    {% for i in appp1%}
 
+    {{ i.Name}}<br>
+
+    {%endfor%}
 
     
+
+
+
 
 </body>
 
