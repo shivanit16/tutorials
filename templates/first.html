@@ -6,18 +6,21 @@
 
 <head>
 
-    <h1 style="border: 2px solid Tomato;">KPOP</h1>
-    <abbr title="Bangtan sonyeodan">BTS</abbr>
+    <h1 style="border: 2px solid Tomato;"><b>KPOP</b></h1>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <br>
     <br>
     <img src="{% static 'images/BTS.jpg' %}"   alt="Bangtan Sonyeodan"  width="500" height="600">
+    <hr>
 
 <body style="background-color:plum;">
+    <abbr title="Bangtan sonyeodan">BTS</abbr>
 
-    <p title="bts"><q>Bulletproof Boyscout</q> The biggest boyband in the world</p>
+    <ul>
+        <dt><h1 style="font-size: xx-small;"></h1> Korean BoyBand</h1></dt>
 
-    <h1 style="font-size: xx-small;"></h1> Korean BoyBand</h1>
+            <dd><p>Young boys from different parts of South Korea was identified by small agency name big hit.<br> They were trained by them to become KPOP idols.<br>Now those young boys are the biggest boy band in the world "BTs"- Bulletproof Boyscout Their fandom is named as "AMRY"- Adorable Representative MC of Youth<br> They are first korean boy band to win the billbord twice and to be nominated in Grammy.<br>BTS is the one of the most important reason for economic growth South Korea.</p></dd>
+    </ul>
     <hr>
 
     <h2 style="color: orange;"> Fandom</h2>
@@ -29,13 +32,20 @@
 </body>
     <hr>
 
+    <p style="color:red;">Members of bts.</p>
+
+
+    {% for i in results%}
+
+    {{ i.Name}}<br>
+
+    {%endfor%}
+
+    <meta charset="UTF-8">
     <pre>
-       <p style="font-size: 0fr;"> <i>you are the cause of my euphoria </i> </p>
+       <p style="font-size: 0fr;"> <i>you are the cause of my euphoria </i> &#128512; &#128151;</p>
 
-    </pre>
-
-    <p style="background-color:rgb(240, 102, 102);"><b> rm jin suga jhope jimn v jk </b> </p> 
-    
+    </pre>    
     <hr>
 
     <h2>Fan chant</h2>
@@ -43,20 +53,19 @@
 
 
     <hr>
-
-    <h2></h2> <b> BTS AND BT21 CHARS</b> </h2>
-
-    <hr>
     <!--List-->
-    <head>Songs</head>
+    <head>ALBUM</head>
     <ul>
-        <li>FL</li>
-        <li>BWL</li>
-        <li>Idlo</li>
-        <li>Dynamite</li>
+        <li>Wings</li>
+        <li>Love yourself</li>
+        <li>7</li>
+        <li>Speak yourself</li>
 
 
     </ul>
+
+    <h2><b> BTS AND BT21 CHARS</b> </h2>
+
 
      <!--table-->
     <head>
@@ -113,12 +122,34 @@
 
     <hr>
     <hr>
-    <p style="color:red;">Members of bts.</p>
-    {% for i in results%}
+    <hr>
 
-    {{ i.Name}}<br>
+    <style>
 
-    {%endfor%}
+        .song{
+
+            background-color:darkviolet;
+        }
+
+
+    </style>
+
+
+
+    <div class="song">
+
+        <h1> <b> Songs of BTS </b></h1>
+
+        <ul></ul>
+
+       <ol> i can make you better ---</ol> Home <br>
+       <ol> Pls give me remedy -- </ol> jamisvu <br>
+       <ol> You got me, I got you --- </ol> mikrocosmos <br>
+        <ol>Light on me </ol>Truth Untold <br>
+        
+    </div>
+
+    
 
 
     <hr>
@@ -126,7 +157,7 @@
     <button onclick="like"> </button>
 
 
-
+<hr>
 
     <address>
         hybe entertainment
