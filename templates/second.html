@@ -9,7 +9,7 @@
         {{ form }}
         Name: <input type="text" name="name" id="Name"><br><br>
         Bias: <input type="text" name="bias"><br><br>
-        Army: True <input type="radio" name="army" value="True" id="True">  False <input type="radio" name="army" value="False" id="False"><br><br>
+        Age: <input type="number" name="age"> <br><br>
         Country: <input type="text" name="country"> <br><br>
         <input type="submit" name="submit">
       </form>
@@ -25,6 +25,8 @@
         <li>
           {{ i.Name }}
           {{ i.Bias }}
+          {{ i.Age}}
+          {{ i.Country }}
         </li>
       </ul>
     {% endfor %}
