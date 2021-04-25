@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <body style="background-color:plum;">
+
+    <div>
+      <form method="POST" action="{% url 'fa2' %}">
+        {% csrf_token %}
+        {{ form }}
+        Search: <input type="text" name="search" id="search"><br><br>
+        <input type="submit" name="submit">
+      </form>
+
+
+    {% if finf  %}
+      <ul>
+        <li>
+          {{ finf.Name }}
+          {{ finf.Bias }}
+          {{ finf.Age}}
+          {{ finf.Country }}
+        </li>
+      </ul>
+    {% endif %}
+
+    {% if none %}
+        {{ none }}
+    {% endif %}
+</body>
+
+
+
+
+
+
+</html>
