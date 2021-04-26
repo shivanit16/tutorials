@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['shivu16.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['shivu16.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -76,20 +76,10 @@ WSGI_APPLICATION = 'prop1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DB_NAME = config('DB_NAME')
-DB_USERNAME = config('DB_USERNAME')
-DB_PASSWORD = config('DB_PASSWORD')
-DB_HOST = config('DB_HOST')
-DB_PORT = config('DB_PORT')
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': DB_NAME,
-        'USER': DB_USERNAME,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': DB_HOST,
-        'PORT': DB_PORT,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -134,7 +124,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     'static'
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,'assets/static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
