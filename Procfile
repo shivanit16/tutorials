@@ -1,0 +1,1 @@
+web: gunicorn prop1.wsgi
